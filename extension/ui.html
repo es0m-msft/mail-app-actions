@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Google Actions for Edge</title>
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body>
+  <main>
+    <h1>Google Actions for Edge</h1>
+    <p>Windows apps can request Google actions. Sending mail and moving meetings always require your approval here.</p>
+    <section>
+      <h2>Account and bridge</h2>
+      <p id="status" role="status">Checking companion...</p>
+      <button id="connect">Connect Google account</button>
+      <button id="disconnect">Disconnect and revoke access</button>
+      <p>Uses the account selected during Google consent, not necessarily the account open in Gmail. Switch accounts by disconnecting first.</p>
+    </section>
+    <section id="approval" hidden>
+      <h2>Review external request</h2>
+      <p>This request came through the local Windows companion. Only approve an action you expected.</p>
+      <pre id="preview"></pre>
+      <p id="expiry"></p>
+      <button id="approve">Approve once</button>
+      <button id="reject">Decline</button>
+    </section>
+    <section>
+      <h2>Read Google data</h2>
+      <button id="contacts">List 50 contacts</button>
+      <button id="meetings">Meetings: today through next week</button>
+      <pre id="result" aria-live="polite"></pre>
+    </section>
+    <p id="error" role="alert"></p>
+  </main>
+  <script type="module" src="ui.js"></script>
+</body>
+</html>

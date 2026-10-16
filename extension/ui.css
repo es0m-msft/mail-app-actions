@@ -1,0 +1,8 @@
+:root { font: 16px/1.5 system-ui, sans-serif; color-scheme: light dark; }
+body { margin: 0; }
+main { max-width: 900px; margin: 32px auto; padding: 0 24px; }
+section { border: 1px solid #888; border-radius: 8px; padding: 16px; margin: 24px 0; }
+button { padding: 10px 16px; margin: 4px; cursor: pointer; font: inherit; }
+pre { white-space: pre-wrap; overflow-wrap: anywhere; max-height: 600px; overflow: auto; }
+#error { color: light-dark(#a21616, #ffb4b4); }
+button:disabled { cursor: default; opacity: .6; }

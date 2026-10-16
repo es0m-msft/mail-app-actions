@@ -1,0 +1,10 @@
+{
+  "name": "edge-google-actions",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "test:native": "dotnet run --project native\\BridgeTests\\BridgeTests.csproj",
+    "check": "node --check extension/background.js && node --check extension/google.js && node --check extension/ui.js"
+  }
+}

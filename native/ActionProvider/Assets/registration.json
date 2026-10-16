@@ -1,0 +1,61 @@
+{
+  "version": 3,
+  "actions": [
+    {
+      "id": "EdgeGoogleActions.ListContacts",
+      "description": "List the first 50 saved Google contacts alphabetically",
+      "allowedAppInvokers": ["*"],
+      "isAvailable": true,
+      "usesGenerativeAI": false,
+      "displaysUI": false,
+      "inputs": [],
+      "inputCombinations": [{ "inputs": [], "description": "List 50 Google contacts" }],
+      "outputs": [{ "name": "Json", "kind": "Text" }],
+      "invocation": { "type": "COM", "clsid": "51971F35-3D52-43DE-A739-FDC87BAE3D90" }
+    },
+    {
+      "id": "EdgeGoogleActions.ListMeetings",
+      "description": "List primary Google Calendar meetings from today through seven days from today",
+      "allowedAppInvokers": ["*"],
+      "isAvailable": true,
+      "usesGenerativeAI": false,
+      "displaysUI": false,
+      "inputs": [],
+      "inputCombinations": [{ "inputs": [], "description": "List this week's Google Calendar meetings" }],
+      "outputs": [{ "name": "Json", "kind": "Text" }],
+      "invocation": { "type": "COM", "clsid": "51971F35-3D52-43DE-A739-FDC87BAE3D90" }
+    },
+    {
+      "id": "EdgeGoogleActions.SendEmail",
+      "description": "Send a plain-text email with Gmail after approval in Edge",
+      "allowedAppInvokers": ["*"],
+      "isAvailable": true,
+      "usesGenerativeAI": false,
+      "displaysUI": true,
+      "inputs": [
+        { "name": "To", "kind": "Text" },
+        { "name": "Subject", "kind": "Text" },
+        { "name": "Body", "kind": "Text" }
+      ],
+      "inputCombinations": [{ "inputs": ["To", "Subject", "Body"], "description": "Send email to '${To.Text}' after approval in Edge" }],
+      "outputs": [{ "name": "Json", "kind": "Text" }],
+      "invocation": { "type": "COM", "clsid": "51971F35-3D52-43DE-A739-FDC87BAE3D90" }
+    },
+    {
+      "id": "EdgeGoogleActions.MoveMeeting",
+      "description": "Move one Google Calendar event or occurrence after approval in Edge and notify attendees",
+      "allowedAppInvokers": ["*"],
+      "isAvailable": true,
+      "usesGenerativeAI": false,
+      "displaysUI": true,
+      "inputs": [
+        { "name": "EventId", "kind": "Text" },
+        { "name": "Start", "kind": "Text" },
+        { "name": "End", "kind": "Text" }
+      ],
+      "inputCombinations": [{ "inputs": ["EventId", "Start", "End"], "description": "Move Google meeting '${EventId.Text}' to '${Start.Text}' after approval in Edge" }],
+      "outputs": [{ "name": "Json", "kind": "Text" }],
+      "invocation": { "type": "COM", "clsid": "51971F35-3D52-43DE-A739-FDC87BAE3D90" }
+    }
+  ]
+}

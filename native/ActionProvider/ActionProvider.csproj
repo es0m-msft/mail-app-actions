@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows10.0.26100.0</TargetFramework>
+    <WindowsSdkPackageVersion>10.0.26100.75</WindowsSdkPackageVersion>
+    <SupportedOSPlatformVersion>10.0.26100.0</SupportedOSPlatformVersion>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <RootNamespace>EdgeGoogleActions.ActionProvider</RootNamespace>
+    <AssemblyName>EdgeGoogleActions.ActionProvider</AssemblyName>
+    <GenerateActionsWinRTComServer>true</GenerateActionsWinRTComServer>
+    <GenerateActionRegistrationManifest>false</GenerateActionRegistrationManifest>
+    <ActionRegistrationManifest>Assets\registration.json</ActionRegistrationManifest>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BridgeProtocol\BridgeProtocol.csproj" />
+    <PackageReference Include="Microsoft.AI.Actions" Version="0.1.0" />
+    <Content Include="Assets\registration.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

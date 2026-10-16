@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Google Actions for Edge",
+  "version": "0.1.0",
+  "description": "Approve Google mail and calendar actions invoked by Windows apps.",
+  "permissions": ["nativeMessaging", "storage", "alarms"],
+  "host_permissions": [
+    "https://gmail.googleapis.com/*",
+    "https://people.googleapis.com/*",
+    "https://www.googleapis.com/calendar/*"
+  ],
+  "background": { "service_worker": "background.js", "type": "module" },
+  "action": { "default_title": "Google Actions: account and approvals" },
+  "options_page": "ui.html",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'none'; base-uri 'none'"
+  }
+}
